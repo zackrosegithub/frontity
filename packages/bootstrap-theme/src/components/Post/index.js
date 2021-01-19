@@ -16,7 +16,7 @@ const Post = ({ state, actions, libraries }) => {
   const post = getPost(state)(type)(id)
   const author = getAuthor(state)(post.author)
   const date = new Date(post.date);
-  
+
   const Html2React = libraries.html2react.Component;
 
   /**
@@ -61,7 +61,11 @@ const Post = ({ state, actions, libraries }) => {
       {/* Render the content using the Html2React component so the HTML is processed
        by the processors we included in the libraries.html2react.processors array. */}
       <Content>
+
+        <div acf={post.content.rentered}></div>
+
         <Html2React html={post.content.rendered} />
+
       </Content>
     </Container>
   ) : null;

@@ -9,14 +9,34 @@ import {Container, Title, Description, StyledLink} from './styles'
 const Header = ({ state }) => {
   return (
     <>
-      <Container>
+
+    <div className="container-fluid">
+
+      <div className="row align-items-center">
+
+        <div className="col-6">
+
         <StyledLink link="/">
-          <Title>{state.frontity.title}</Title>
+
+          <Title className="text-black">{state.frontity.title}</Title>
+
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
+
+        </div>
+
+        <div className="col-6">
+
+        <Nav/>
+
+        </div>
+
         <MobileMenu />
-      </Container>
-      <Nav />
+
+
+      </div>
+    </div>
+
+
     </>
   );
 };

@@ -5,6 +5,8 @@ import Switch from "@frontity/components/switch";
 import { CacheProvider } from '@emotion/core'
 import createCache from '@emotion/cache'
 
+import CustomPage from "../CustomPage/custompage";
+
 const myCache = createCache()
 myCache.compat = true
 
@@ -17,7 +19,7 @@ import Title from '../Title/'
 import PageError from '../PageError/'
 
 import {globalStyles, HeadContainer, Main} from './styles'
-import ErrorBoundary from '../ErrorBoundary/'
+// import ErrorBoundary from '../ErrorBoundary/'
 
 import bootstrapCss from 'bootstrap/dist/css/bootstrap.min.css';
 const BootstrapStyles = () => (
@@ -39,15 +41,16 @@ const Theme = ({ state }) => {
 
       <BootstrapStyles />
       <Global styles={globalStyles} />
-      
+
       <HeadContainer>
         <Header />
       </HeadContainer>
-        
+
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
+          <CustomPage when={state.router.link=='/home/' || state.router.link=='/'} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>

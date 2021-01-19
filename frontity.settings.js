@@ -2,8 +2,8 @@ const settings = {
   "name": "wpcamp-demo",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.io",
-      "title": "Test Frontity Blog",
+      "url": "https://activegear.club/",
+      "title": "Zack's Test",
       "description": "WordPress installation for Frontity development"
     }
   },
@@ -24,14 +24,6 @@ const settings = {
             [
               "Travel",
               "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
             ]
           ],
           "featured": {
@@ -45,7 +37,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://test.frontity.io/wp-json"
+          "api": "https://activegear.club/wp-json"
         }
       }
     },

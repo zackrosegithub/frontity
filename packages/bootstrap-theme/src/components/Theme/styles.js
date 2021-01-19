@@ -17,7 +17,11 @@ export const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  background-color: white;
+  height: 50vh;
+  width: 100%;
+}
+
 `;
 
 export const Main = styled.div`
@@ -28,4 +32,6 @@ export const Main = styled.div`
     rgba(66, 174, 228, 0.1),
     rgba(66, 174, 228, 0)
   );
+  padding-right: 15px;
+  padding-left: 15px;
 `;

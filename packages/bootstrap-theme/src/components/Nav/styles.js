@@ -9,6 +9,10 @@ export const NavContainer = styled.nav`
   padding: 0 24px;
   margin: 0;
   overflow-x: auto;
+  display:flex;
+  justify-content: center;
+  margin-top: 2rem;
+
 
   @media screen and (max-width: 560px) {
     display: none;
@@ -18,7 +22,7 @@ export const NavContainer = styled.nav`
 export const NavItem = styled.div`
   padding: 0;
   margin: 0 16px;
-  color: #fff;
+  color: black;
   font-size: 0.9em;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -30,7 +34,7 @@ export const NavItem = styled.div`
     border-bottom-color: transparent;
     /* Use for semantic approach to style the current link */
     &[aria-current="page"] {
-      border-bottom-color: #fff;
+      border-bottom-color: pink;
     }
   }
 
